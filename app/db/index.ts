@@ -3,11 +3,13 @@ import mongoose from "mongoose";
 
 dotenv.config();
 
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = "mongodb://localhost:27017/";
+
+console.log(MONGO_URI);
 
 (() => {
   mongoose.set("strictQuery", false);
-  mongoose.connect(MONGO_URI! + "/sectors-db");
+  mongoose.connect(MONGO_URI + "sectors-db");
   mongoose.connection
     .once("open", () => {
       console.log("MongoDB Connected");
