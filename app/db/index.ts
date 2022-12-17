@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 dotenv.config();
 
-const MONGO_URI = "mongodb://mongo:pMcRXOXhh4y73ij4IAJV@containers-us-west-175.railway.app:7199";
+const MONGO_URI = "mongodb+srv://lucifer:liluzivert@cluster0.cqdfilj.mongodb.net/test";
 
 console.log(MONGO_URI);
 
