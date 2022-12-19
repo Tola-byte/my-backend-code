@@ -1,13 +1,19 @@
 import express, { Request } from "express";
+const bodyparser = require('body-parser')
 import cors from "cors";
 import "./db";
 import sectorModel from "./model/sectors.model";
 import User from "./model/user.model";
 
+
+
 const app = express();
 const PORT =  process.env.PORT || 8080;
 
+
 app.use(express.json());
+app.use(bodyparser.urlencoded({extended:false}))
+app.use(bodyparser.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
