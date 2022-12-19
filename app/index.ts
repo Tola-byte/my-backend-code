@@ -56,7 +56,7 @@ app.post(
     response
   ) => {
     try {
-      const newUser = new User(request.body);
+      const newUser = new User(request.body.name);
       await newUser.save();
       response.status(200).send({
         message: "User Added Successfully",
