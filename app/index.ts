@@ -59,10 +59,13 @@ app.post(
       sectors: string[];
       //sectors : Schema.Types.ObjectId,
     }>,
+    
     response
   ) => {
     try {
+      console.log(request.body)
       const newUser = new User(request.body);
+      
       await newUser.save();
       // response.status(200).send({
       //   // message: "User Added Successfully",

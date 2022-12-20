@@ -12,12 +12,12 @@ const sectorSchema = new Schema({
   // }
 });
 
-// sectorSchema.methods.toJSON = function () {
-//   const sector = this;
-//   const sectorObject = sector.toObject();
-//   delete sectorObject.__v;
-//   return sectorObject;
-// };
+sectorSchema.methods.toJSON = function () {
+  const sector = this;
+  const sectorObject = sector.toObject();
+  delete sectorObject.__v;
+  return sectorObject;
+};
 
 const sectorModel = mongoose.model("Sector", sectorSchema);
 
