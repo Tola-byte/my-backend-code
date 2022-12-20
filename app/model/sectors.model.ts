@@ -4,7 +4,6 @@ const sectorSchema = new Schema({
   name: {
     type: String,
     required: true,
-    path: "name"
   },
 });
 
