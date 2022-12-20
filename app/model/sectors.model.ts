@@ -5,7 +5,11 @@ const sectorSchema = new Schema({
     type: String,
     required: true,
   },
-   
+}, {
+  writeConcern: {
+    j: true,
+    wtimeout: 1000
+  }
 });
 
 sectorSchema.methods.toJSON = function () {
