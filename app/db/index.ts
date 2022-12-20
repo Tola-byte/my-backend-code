@@ -11,7 +11,7 @@ console.log(MONGO_URI);
   mongoose.set("strictQuery", false);
   mongoose.connect(MONGO_URI+"/sectors-db");
   mongoose.connection
-    .once("open", () => {
+    .once("open", { useNewUrlParser: true, useUnifiedTopology: true} , () => {
       console.log("MongoDB Connected");
     })
     .on("error", (error) => {
