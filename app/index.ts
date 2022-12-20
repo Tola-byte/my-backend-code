@@ -64,10 +64,11 @@ app.post(
     try {
       const newUser = new User(request.body);
       await newUser.save();
-      response.status(200).send({
-        message: "User Added Successfully",
-        newUser,
-      });
+      // response.status(200).send({
+      //   // message: "User Added Successfully",
+      //   newUser,
+      // });
+      response.status(200).send(newUser)
     } catch (error) {
       response.status(500).send(error);
     }
