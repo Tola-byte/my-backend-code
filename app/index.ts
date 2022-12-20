@@ -1,5 +1,6 @@
 import express, { Request } from "express";
 const bodyparser = require('body-parser')
+import { Schema } from "mongoose";
 import cors from "cors";
 import "./db";
 import sectorModel from "./model/sectors.model";
@@ -55,7 +56,8 @@ app.post(
     request: CustomRequest<{
       name: string;
       agreement: boolean;
-      sectors: string;
+      //sectors: string[];
+      sectors : Schema.Types.ObjectId,
     }>,
     response
   ) => {

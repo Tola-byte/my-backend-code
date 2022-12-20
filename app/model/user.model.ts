@@ -13,8 +13,8 @@ const UserSchema = new Schema(
     },
     sectors: 
       {
-        type: String,
-        //type: Schema.Types.ObjectId,
+       // type: String,
+        type: Schema.Types.ObjectId,
         ref: "Sector",
       },
     
