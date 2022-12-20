@@ -6,18 +6,18 @@ const sectorSchema = new Schema({
     required: true,
   },
 }, {
-  writeConcern: {
-    j: true,
-    wtimeout: 1000
-  }
+  // writeConcern: {
+  //   j: true,
+  //   wtimeout: 1000
+  // }
 });
 
-sectorSchema.methods.toJSON = function () {
-  const sector = this;
-  const sectorObject = sector.toObject();
-  delete sectorObject.__v;
-  return sectorObject;
-};
+// sectorSchema.methods.toJSON = function () {
+//   const sector = this;
+//   const sectorObject = sector.toObject();
+//   delete sectorObject.__v;
+//   return sectorObject;
+// };
 
 const sectorModel = mongoose.model("Sector", sectorSchema);
 
