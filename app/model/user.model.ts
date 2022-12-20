@@ -11,13 +11,13 @@ const UserSchema = new Schema(
       type: Boolean,
       default: false,
     },
-    sectors: [
+    sectors: 
       {
         type: String,
         //type: Schema.Types.ObjectId,
         ref: "Sector",
       },
-    ],
+    
   },
   { timestamps: true }
 );
