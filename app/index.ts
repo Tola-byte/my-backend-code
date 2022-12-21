@@ -37,6 +37,7 @@ app.get("/sectors", async (_, response) => {
 
 app.get("/user", async (request, response) => {
   try {
+    console.log(request)
     if (!request.query.userId) throw new Error("Invalid User found");
     const user = await User.findById(request.query.userId).populate("sectors");
     console.log(user)
