@@ -38,8 +38,8 @@ app.get("/sectors", async (_, response) => {
 app.get("/user", async (request, response) => {
   try {
     console.log(request.query.userID)
-    if (!request.query.userId) throw new Error("Invalid User found");
-    const user = await User.findById(request.query.userId).populate("sectors");
+    if (!request.query.userID) throw new Error("Invalid User found");
+    const user = await User.findById(request.query.userID).populate("sectors");
     console.log(user)
     if (!user) {
       throw new Error("Invalid User");
