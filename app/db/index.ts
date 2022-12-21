@@ -11,7 +11,7 @@ console.log(MONGO_URI);
 
 (() => {
   mongoose.set("strictQuery", false);
-  mongoose.connect(MONGO_URI+"/sectors-db");
+  mongoose.connect(MONGO_URI+"1/sectors-db");
   mongoose.connection
     .once("open",
     () => {
