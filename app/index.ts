@@ -58,7 +58,7 @@ app.post(
     request: CustomRequest<{
       name: string;
       agreement: boolean;
-      sectors: string[];
+      sector: string[];
      // sectors : Schema.Types.ObjectId,
     }>,
     
