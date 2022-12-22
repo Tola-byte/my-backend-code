@@ -9,7 +9,7 @@ const UserSchema = new Schema(
     },
     agreement: {
       type: Boolean,
-      default: false,
+     // default: false,
     },
     sectors: [
       {
