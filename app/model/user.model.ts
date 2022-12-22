@@ -11,7 +11,7 @@ const UserSchema = new Schema(
       type: Boolean,
       default: false,
     },
-    sector: [
+    sectors: [
       {
         type: Schema.Types.ObjectId,
         ref: "Sector",
