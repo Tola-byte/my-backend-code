@@ -9,14 +9,14 @@ const UserSchema = new Schema(
     },
     agreement: {
       type: Boolean,
-     // default: false,
+      default: false,
     },
     sectors: [
       {
         type: Schema.Types.ObjectId,
         ref: "Sector",
       },
-    ]
+    ],
     
   },
   { timestamps: true }
