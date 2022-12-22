@@ -58,8 +58,7 @@ app.post(
     request: CustomRequest<{
       name: string;
       agreement: boolean;
-      //sectors: string;
-      sectors : Schema.Types.ObjectId,
+      sectors: string[];
     }>,
     
     response
@@ -73,7 +72,7 @@ app.post(
          message: "User Added Successfully",
          newUser,
        });
-     // response.status(200).send(newUser)
+     
     } catch (error) {
       response.status(500).send(error);
     }
