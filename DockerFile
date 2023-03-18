@@ -1,0 +1,15 @@
+FROM node:16-alpine AS runner
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install 
+
+COPY . .
+
+EXPOSE 8080
+
+CMD ["npm" , "start" ]
+
+# build image with the command : docker build -t my-backend-app .
+
+# to run docker container : docker run -p 8080:8080 my-backend-app
